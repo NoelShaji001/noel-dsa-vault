@@ -112,7 +112,27 @@ int main(){
     for (i = 0; i <= e[0][2]; i++) {
         printf("%d %d %d\n", e[i][0], e[i][1], e[i][2]);
     }
-    return 0;
+  
+int t[r][3];  
+t[0][0] = e[0][1];  
+t[0][1] = e[0][0];  
+t[0][2] = e[0][2];  
+
+
+for(i = 1; i <= e[0][2]; i++) {
+    t[i][0] = e[i][1];  
+    t[i][1] = e[i][0];  
+    t[i][2] = e[i][2];  
+}
+
+
+
+
+printf("Transpose of the resulting sparse matrix:\n");
+for(i = 0; i <= t[0][2]; i++) {
+    printf("%d %d %d\n", t[i][0], t[i][1], t[i][2]);
+}
+return 0;
 }
 
 
